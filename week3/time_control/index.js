@@ -7,22 +7,34 @@ module.exports = function (date) {
 };
 
 function _handleDateOperation(date, value, dim, isPlus) {
+    var result = new Date(date);
     if(value < 0)
         throw TypeError("Value cannot be < 0");
     switch(dim) {
         case 'years':
+            if(isPlus) result.setFullYear(date.getFullYear() + value);
+            else result.setFullYear(date.getFullYear() - value);
             break;
         case 'months':
+            if(isPlus) result.setMonth(date.getMonth() + value);
+            else result.setMonth(date.getMonth() - value);
             break;
         case 'days':
+            if(isPlus) result.setDate(date.getDate() + value);
+            else result.setDate(date.getDate() - value);
             break;
         case 'hours':
+            if(isPlus) result.setHours(date.getHours() + value);
+            else result.setHours(date.getHours() - value);
             break;
         case 'minutes':
+            if(isPlus) result.setMinutes(date.getMinutes() + value);
+            else result.setMinutes(date.getMinutes() - value);
             break;
         default:
             throw TypeError("Incorrect dimension");
     }
+    return result;
 }
 
 function getFormattedDate(date) {
@@ -30,14 +42,14 @@ function getFormattedDate(date) {
     res += date.getFullYear();
     res += '-';
     if (date.getMonth() < 10)
-        res += '0' + date.getMonth();
+        res += '0' + (date.getMonth()+1);
     else
-        res += date.getMonth();
+        res += (date.getMonth() + 1);
     res += '-';
-    if (date.getDay() < 10)
-        res += '0' + date.getDay();
+    if (date.getDate() < 10)
+        res += '0' + date.getDate();
     else
-        res += date.getDay();
+        res += date.getDate();
     res += ' ';
     if (date.getHours() < 10)
         res += '0' + date.getHours();
@@ -52,15 +64,18 @@ function getFormattedDate(date) {
 }
 
 function createDateObject(date) {
-    var d = new Date(date);
-    d.add = (value, dim) => {
-        _handleDateOperation(d, value, dim, true);
-        return d;
+    var res = {};
+    res.d = new Date(date);
+
+    res.add = (value, dim) => {
+        res.d = _handleDateOperation(res.d, value, dim, true);
+        res.value = getFormattedDate(res.d);
+        return res;
     };
-    d.subtract = (value, dim) => {
-        _handleDateOperation(d, value, dim, false);
-        return d;
+    res.subtract = (value, dim) => {
+        res.d = _handleDateOperation(res.d, value, dim, false);
+        res.value = getFormattedDate(res.d);
+        return res;
     };
-    d.value = getFormattedDate(d);
-    return d;
+    return res;
 }
