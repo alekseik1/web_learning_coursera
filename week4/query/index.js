@@ -6,16 +6,17 @@
 function query(collection) {
     const operations = [].slice.apply(arguments);
     var result = collection.slice();
+    const original_collection = collection.slice();
     var operations_stack = [];
     for (op of operations) {
-        if (op[0] === 'select')
-            operations_stack.push(op[1]);
-        else if (op[0] === 'filterIn')
-            operations_stack.push(op[1]);
+        if (op[0] === 'filterIn')
+            operations_stack.push(op);
+        else if (op[0] === 'select')
+            operations_stack.unshift(op);
     }
     while (operations_stack.length > 0) {
         let op = operations_stack.pop();
-        result = op(result);
+        result = op[1](result);
     }
     return result;
 }
