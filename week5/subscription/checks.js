@@ -30,7 +30,9 @@ emitter
     .emit('new_notification');
 
 // Проверяем количество нотификаций
-assert.equal(notifications.counter, 1, 'Получена одна нотификация');
+assert.equal(notifications.counter, 1,
+//    'Получена одна нотификация'
+);
 
 // В логе сохранено событие
 // Так как обработчик notifications.count отработал первым,
