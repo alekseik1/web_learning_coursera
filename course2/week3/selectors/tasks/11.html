@@ -12,7 +12,17 @@
 
         <main class="global-results">
             <style>
-                /* ваш код здесь... */
+                input:not(:valid) {
+                    border: 3px solid #ff6698;
+                }
+
+                input:first-child:hover {
+                    border: 3px solid #6698ff;
+                }
+
+                input:valid {
+                    border: 3px solid #98ff66;
+                }
             </style>
 
             <section class="global-result">
