@@ -155,3 +155,6 @@ typings/
 
 # DS store
 .DS_Store
+
+# Whole .idea
+.idea/
