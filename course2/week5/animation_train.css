@@ -1,0 +1,32 @@
+.animation {
+    width: 150px;
+    height: 150px;
+    background-color: #f00;
+    transition: background-color;
+    transition-duration: 500ms;
+    animation-name: all-moves;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+.animation:hover {
+    background-color: #ff0;
+}
+
+@keyframes all-moves {
+    25% {
+        transform: translateX(100px);
+    }
+    50% {
+        transform: translateX(100px) translateY(100%);
+    }
+    75% {
+        transform: translateX(100px) translateY(100%) scale(2) rotate(145deg);;
+    }
+    100% {
+        transform: translateX(100px) translateY(100%) scale(2) rotate(145deg);
+    }
+}
