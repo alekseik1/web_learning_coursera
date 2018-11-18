@@ -87,7 +87,7 @@
 
     width: 100px;
     height: 36px;
-    animation: ship-movement 4s linear infinite 0s forwards;
+    animation: ship-movement 7s linear infinite 0s forwards;
 }
 
 @keyframes ship-movement {
@@ -136,16 +136,95 @@
 .smoke-1 {
     top: -25px;
     right: 44px;
+    animation: smoke1-animation 3.1s linear infinite 0s forwards;
+}
+
+@keyframes smoke1-animation {
+    0% {
+        top: -25px;
+        opacity: 100%;
+        right: 44px;
+        transform: scale(1);
+    }
+    25% {
+        top: -30px;
+        opacity: 30%;
+        right: 46px;
+    }
+    80% {
+        top: -35px;
+        right: 43px;
+        opacity: 60%;
+    }
+    100% {
+        top: -40px;
+        opacity: 0;
+        right: 45px;
+        transform: scale(2);
+    }
 }
 
 .smoke-2 {
     top: -25px;
     right: 42px;
+    animation: smoke2-animation 3.6s infinite 0s forwards;
+}
+
+
+@keyframes smoke2-animation {
+    0% {
+        top: -25px;
+        opacity: 100%;
+        right: 42px;
+        transform: scale(1);
+    }
+    25% {
+        top: -30px;
+        opacity: 30%;
+        right: 43px;
+    }
+    80% {
+        top: -35px;
+        right: 41px;
+        opacity: 60%;
+    }
+    100% {
+        top: -40px;
+        opacity: 0;
+        right: 49px;
+        transform: scale(2);
+    }
 }
 
 .smoke-3 {
     top: -25px;
     right: 49px;
+    animation: smoke3-animation 2.9s linear infinite 0s forwards;
+}
+
+@keyframes smoke3-animation {
+    0% {
+        top: -25px;
+        opacity: 100%;
+        right: 49px;
+        transform: scale(1);
+    }
+    25% {
+        top: -30px;
+        opacity: 30%;
+        right: 52px;
+    }
+    80% {
+        top: -35px;
+        right: 48px;
+        opacity: 60%;
+    }
+    100% {
+        top: -40px;
+        opacity: 0;
+        right: 49px;
+        transform: scale(2);
+    }
 }
 
 .sun {
