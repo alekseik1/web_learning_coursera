@@ -276,40 +276,135 @@
     }
 }
 
+.sun div:nth-child(1) {
+    transform: rotate(0);
+    animation: sun-light0 10s linear infinite 0s forwards;
+}
+
+@keyframes sun-light0 {
+    from {
+        transform: rotate(0);
+    } to { transform: rotate(360deg);}
+}
+
 .sun div:nth-child(2) {
     transform: rotate(18deg);
+    animation: sun-light1 10s linear infinite 0s forwards;
+}
+
+@keyframes sun-light1 {
+    from {
+        transform: rotate(18deg);
+    }
+    to {
+        transform: rotate(378deg);
+    }
 }
 
 .sun div:nth-child(3) {
     transform: rotate(36deg);
+    animation: sun-light2 10s linear infinite 0s forwards;
+}
+
+@keyframes sun-light2 {
+    from {
+        transform: rotate(36deg);
+    }
+    to {
+        transform: rotate(396deg);
+    }
 }
 
 .sun div:nth-child(4) {
     transform: rotate(54deg);
+    animation: sun-light3 10s linear infinite 0s forwards;
 }
 
+@keyframes sun-light3 {
+    from {
+        transform: rotate(54deg);
+    }
+    to {
+        transform: rotate(414deg);
+    }
+}
 .sun div:nth-child(5) {
     transform: rotate(72deg);
+    animation: sun-light4 10s linear infinite 0s forwards;
 }
 
+@keyframes sun-light4 {
+    from {
+        transform: rotate(72deg);
+    }
+    to {
+        transform: rotate(432deg);
+    }
+}
 .sun div:nth-child(6) {
     transform: rotate(90deg);
+    animation: sun-light5 10s linear infinite 0s forwards;
 }
 
+@keyframes sun-light5 {
+    from {
+        transform: rotate(90deg);
+    }
+    to {
+        transform: rotate(450deg);
+    }
+}
 .sun div:nth-child(7) {
     transform: rotate(-18deg);
+    animation: sun-light6 10s linear infinite 0s forwards;
 }
 
+@keyframes sun-light6 {
+    from {
+        transform: rotate(-18deg);
+    }
+    to {
+        transform: rotate(342deg);
+    }
+}
 .sun div:nth-child(8) {
     transform: rotate(-36deg);
+    animation: sun-light7 10s linear infinite 0s forwards;
 }
 
+@keyframes sun-light7 {
+    from {
+        transform: rotate(-36deg);
+    }
+    to {
+        transform: rotate(324deg);
+    }
+}
 .sun div:nth-child(9) {
     transform: rotate(-54deg);
+    animation: sun-light8 10s linear infinite 0s forwards;
 }
 
+@keyframes sun-light8 {
+    from {
+        transform: rotate(-54deg);
+    }
+    to {
+        transform: rotate(306deg);
+    }
+}
 .sun div:nth-child(10) {
     transform: rotate(-72deg);
+    animation: sun-light9 10s linear infinite 0s forwards;
+}
+
+@keyframes sun-light9 {
+    from {
+        transform: rotate(-72deg);
+    }
+    to {
+        transform: rotate(288deg);
+    }
 }
 
 .cloud {
