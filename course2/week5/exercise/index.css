@@ -247,7 +247,7 @@
     height: 100%;
 
     transform-origin: bottom center;
-    animation: sun-rotation 6s linear infinite 0s forwards;
+    animation: sun-rotation 60s linear infinite 0s forwards;
 }
 
 .sun div {
