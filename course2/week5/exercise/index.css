@@ -87,6 +87,16 @@
 
     width: 100px;
     height: 36px;
+    animation: ship-movement 4s linear infinite 0s forwards;
+}
+
+@keyframes ship-movement {
+    0% {
+        right: -200px;
+    }
+    100% {
+        right: 500px;
+    }
 }
 
 .ship_smokestack {
