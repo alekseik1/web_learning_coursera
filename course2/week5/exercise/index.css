@@ -453,7 +453,7 @@
 .cloud-2 {
     top: 50px;
     perspective: 170px;
-    transform: scale(0.7);
+    transform: scale(0.7) scaleX(-1);
     animation: cloud-move 9.5s linear infinite;
 }
 
@@ -467,7 +467,7 @@
 .cloud-4 {
     top: 170px;
     perspective: 100px;
-    transform: scale(1);
+    transform: scale(1) scaleX(-1);
     animation: cloud-move 8s linear infinite;
 }
 
