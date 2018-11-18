@@ -247,6 +247,7 @@
     height: 100%;
 
     transform-origin: bottom center;
+    animation: sun-rotation 6s linear infinite 0s forwards;
 }
 
 .sun div {
@@ -260,6 +261,19 @@
 
     border: solid #ffcf11;
     border-width: 10px 0 10px 0;
+}
+
+@keyframes sun-rotation {
+    from {
+        transform-origin: 50% 400px;
+        transform: rotate(-90deg);
+        perspective: 0;
+    }
+
+    to {
+        transform-origin: 50% 400px;
+        transform: rotate(90deg);
+    }
 }
 
 .sun div:nth-child(2) {
