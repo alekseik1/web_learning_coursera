@@ -18,19 +18,19 @@
     width: 500px;
     height: 380px;
 
-    animation: sky-color 4s linear infinite 0s alternate forwards;
+    animation: sky-color 60s linear infinite;
 }
 
 @keyframes sky-color {
-    0% {
+    20%, 65% {
         background: skyblue;
         box-shadow: 0 -400px 300px -300px steelblue inset;
     }
-    50% {
+    75%, 80% {
         background: darkslateblue;
         box-shadow: 0 -400px 300px -300px orangered inset;
     }
-    100% {
+    0%, 10%, 90%, 100% {
         background: darkslateblue;
         box-shadow: 0 -400px 300px -300px transparent inset;
     }
@@ -272,7 +272,7 @@
 
     to {
         transform-origin: 50% 400px;
-        transform: rotate(90deg);
+        transform: rotate(130deg);
     }
 }
 
